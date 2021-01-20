@@ -38,4 +38,19 @@ function add(number) {
 numbers.forEach(add)
 console.log("The total of the numbers " + total);
 
-// New functions here
+// Excercise
+
+
+var images = [
+    { height: 10, width: 30 },
+    { height: 20, width: 90 },
+    { height: 54, width: 32 }
+  ];
+  var areas = [];
+
+  images.forEach((image) => {
+      areas.push(image.width * image.height);
+  })
+
+  console.log(areas);
+  
