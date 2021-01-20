@@ -37,3 +37,5 @@ function add(number) {
 
 numbers.forEach(add)
 console.log("The total of the numbers " + total);
+
+// New functions here
