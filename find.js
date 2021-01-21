@@ -102,3 +102,24 @@ function findWhere(array, criteria) {
 }
 
 console.log(findWhere(ladders, {height: 30}));
+
+
+// excercise 4
+
+let weather = [
+    { name: 'Malappuram', temperature: 24.3, humidity: 1.5 },
+    { name: 'Kochi', temperature: 22.3, humidity: 3 },
+    { name: 'Trivandrum', temperature: 20.3, humidity: 2 },
+    { name: 'Calicut', temperature: 25.3, humidity: 1 },
+    { name: 'Palakkad', temperature: 30.3, humidity: 4 }
+]
+
+function findHumidity(array, arg) {
+    keys =  Object.keys(arg)
+    
+    return array.find((place) => {
+        return place[keys] === arg[keys]
+    })
+}
+
+console.log(findHumidity(weather, {humidity: 2}));
