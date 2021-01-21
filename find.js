@@ -59,3 +59,46 @@ function postForComment(posts, comment) {
 }
 
 console.log(postForComment(posts, comment));
+
+// Escersice 1
+// find user with admin
+var users = [
+    { id: 1, admin: false },
+    { id: 2, admin: false },
+    { id: 3, admin: true }
+  ];
+  
+  var admin = users.find((user) => { return user.admin });
+
+
+  console.log(admin);
+
+// Excersice 2
+// find account holder with balance 12 and assign to account variable
+var accounts = [
+    { balance: -10 },
+    { balance: 12 },
+    { balance: 0 }
+];
+  
+var account = accounts.find((account) => { return account.balance === 12});
+
+console.log(account);
+
+// Excersice 3
+
+var ladders = [
+    { id: 1, height: 20 },
+    { id: 2, height: 30 }
+]
+
+function findWhere(array, criteria) {
+    var property = Object.keys(criteria)
+
+    console.log(property);
+    return array.find((data) => {
+        return data[property] === criteria[property]
+    })
+}
+
+console.log(findWhere(ladders, {height: 30}));
