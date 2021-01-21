@@ -45,12 +45,32 @@ var images = [
     { height: 10, width: 30 },
     { height: 20, width: 90 },
     { height: 54, width: 32 }
-  ];
-  var areas = [];
+];
+var areas = [];
 
-  images.forEach((image) => {
-      areas.push(image.width * image.height);
-  })
+images.forEach((image) => {
+    // areas.push(image.width * image.height);
+    // tried pusingg as an object to the array
+    areas.push({'Image dimension ' : image.width * image.height});
+})
 
-  console.log(areas);
+console.log(areas);
   
+
+// My revision 
+
+let weather = [
+    { name: 'Malappuram', temperature: 24.3, humidity: 1.5 },
+    { name: 'Kochi', temperature: 22.3, humidity: 3 },
+    { name: 'Trivandrum', temperature: 20.3, humidity: 2 },
+    { name: 'Calicut', temperature: 25.3, humidity: 1 },
+    { name: 'Palakkad', temperature: 30.3, humidity: 4 }
+]
+
+let weatherList = [];
+weather.forEach((place) => {
+    place.humidity > 2 ? weatherList.push(place) : '';
+})
+
+console.log(weather);
+console.log(weatherList);

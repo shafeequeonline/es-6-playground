@@ -54,11 +54,11 @@ console.log(filteredNumbers);
 // filter users with admin access
 
 var users = [
-    { id: 1, admin: true },  
-    { id: 2, admin: false },
-    { id: 3, admin: false },
-    { id: 4, admin: false },
-    { id: 5, admin: true },
+    { id: 1, admin: true , experience: 3},  
+    { id: 2, admin: true, experience: 5 },
+    { id: 3, admin: false, experience: 3 },
+    { id: 4, admin: false, experience: 6 },
+    { id: 5, admin: true, experience: 1 },
 ];
    
 var filteredUsers = users.filter((user) => {
@@ -78,3 +78,12 @@ var lessThanFifteen = reject(numbers, function(number) {
 });
 
 console.log(lessThanFifteen);
+
+// Excersice 
+// filter users array with admin access and morethan 3 years of experience
+
+let threeYearExpAdmin = users.filter((user) => {
+    return user.admin && user.experience >= 3
+})
+
+console.log(threeYearExpAdmin);

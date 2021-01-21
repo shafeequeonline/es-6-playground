@@ -57,6 +57,8 @@ var images = [
       return image.height
   });
 
+  console.log(heights);
+
   // Excercise 2 , create new array with the speed values. calulation is distance / time
   var trips = [
     { distance: 34, time: 10 },
@@ -87,3 +89,20 @@ function pluck(array, property) {
 }
 
 console.log(pluck(paints, 'color'));
+
+// Revision
+
+let weather = [
+    { name: 'Malappuram', temperature: 24.3, humidity: 1.5 },
+    { name: 'Kochi', temperature: 22.3, humidity: 3 },
+    { name: 'Trivandrum', temperature: 20.3, humidity: 2 },
+    { name: 'Calicut', temperature: 25.3, humidity: 1 },
+    { name: 'Palakkad', temperature: 30.3, humidity: 4 }
+]
+
+let humidity = weather.map((place) => {
+    return place.humidity;
+})
+
+console.log(pluck(weather, 'name'));
+console.log(humidity);
