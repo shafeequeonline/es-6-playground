@@ -72,3 +72,26 @@ let someSuperAdmin = users.some((user) => {
 })
 
 console.log("allSuperAdmin: " + allSuperAdmin, "someSuperAdmin: " + someSuperAdmin);
+
+
+function Field(value) {
+    this.value = value;
+}
+
+Field.prototype.validate = function() {
+    return this.value.length > 0;
+}
+
+var username = new Field('shafeeque')
+var password = new Field('123455678890')
+var dob = new Field('10/10/20')
+
+var allUserValid = username.validate() && password.validate() && dob.validate();
+console.log(allUserValid);
+
+var fields = [username, password, dob]
+var allUserValidES6 = fields.every((field) => {
+    return field.validate()
+})
+
+console.log(allUserValidES6);
