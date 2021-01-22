@@ -38,3 +38,18 @@ let someComputersCanRunES6 = computers.some((computer) => {
 
 console.log(allComputersCanRunES6);
 console.log(someComputersCanRunES6);
+
+
+let names = ['Rajeev', 'Nijo', 'Linto', 'Shafeeque'];
+
+let allNamesSatisfyMin5Charecters = names.every((name) => {
+    return name.length > 5;
+})
+
+console.log(allNamesSatisfyMin5Charecters);
+
+let someNamesSatisfyMin5Charecters = names.some((name) => {
+    return name.length > 5;
+})
+
+console.log(someNamesSatisfyMin5Charecters);
