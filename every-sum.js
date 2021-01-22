@@ -53,3 +53,22 @@ let someNamesSatisfyMin5Charecters = names.some((name) => {
 })
 
 console.log(someNamesSatisfyMin5Charecters);
+
+
+var users = [
+    { id: 1, admin: true , experience: 3},  
+    { id: 2, admin: true, experience: 5 },
+    { id: 3, admin: false, experience: 3 },
+    { id: 4, admin: false, experience: 6 },
+    { id: 5, admin: true, experience: 1 },
+];
+
+let allSuperAdmin = users.every((user) => {
+    return user.experience > 3;
+})
+
+let someSuperAdmin = users.some((user) => {
+    return user.experience > 3;
+})
+
+console.log("allSuperAdmin: " + allSuperAdmin, "someSuperAdmin: " + someSuperAdmin);
