@@ -124,3 +124,30 @@ var users = [
   });
 
   console.log(inProgress);
+
+
+// Revision
+let developers = [
+    { name: 'Shafeeque', html : 5, angular: 1 },
+    { name: 'Rajeev', html : 6, angular: 3 },
+    { name: 'Shameem', html : 7, angular: 4 },
+    { name: 'SHamseer', html : 3, angular: 0 },
+    { name: 'Farook', html : 3, angular: .5 },
+]
+
+// task 1
+// find developer with more than 3 years experience in html
+// find developers with more than 2 years in angular
+
+
+let allDevelopersCanDoAngular = developers.every((developer) => {
+    return developer.html > 3 && developer.angular > 2
+})
+
+console.log("allDevelopersCanDoAngular : " + allDevelopersCanDoAngular);
+
+let someDevelopersCanDoAngular = developers.some((developer) => {
+    return developer.html > 3 && developer.angular > 2
+})
+
+console.log("someDevelopersCanDoAngular : " + someDevelopersCanDoAngular);
