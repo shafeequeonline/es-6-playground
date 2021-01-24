@@ -26,7 +26,15 @@ function double(number) {
 
 // ES6
 // removed the brackets since we have only one argument 
-// removed retund and curly brackets sine we have only 1 return statement
+// removed retund and curly brackets sine we have only 1 return statement 
 const doubleNumber = number => number * 2;
 
 console.log(doubleNumber(4));
+
+// example
+const numbers = [1,2,3];
+// const doubleArray = numbers.map(function(number) {
+//     return number * 2
+// })
+const doubleArray = numbers.map((number) => number * 2);
+console.log(doubleArray);
