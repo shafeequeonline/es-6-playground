@@ -38,3 +38,29 @@ const numbers = [1,2,3];
 // })
 const doubleArray = numbers.map((number) => number * 2);
 console.log(doubleArray);
+
+// excercise
+const team = {
+    members: ['Jane', 'Bill'],
+    teamName: 'Super squad',
+    teamSummery : function() {
+        let self = this; // we are caching the scope of this here. if we use arrow function here we can get rid of this issue. This is called lexical this
+        return this.members.map(function(member) {
+        
+            return `${member} is on team ${self.teamName}`
+        })
+    }
+}
+
+console.log(team.teamSummery());
+
+const teamES6 = {
+    members: ['Jane', 'Bill'],
+    teamName: 'Super squad',
+    teamSummery : function() {
+        // if we use arrow function here we can get rid of this issue. This is called lexical this
+        return this.members.map(member =>`${member} is on team ${this.teamName}`)
+    }
+}
+
+console.log(teamES6.teamSummery());
