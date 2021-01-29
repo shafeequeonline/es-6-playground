@@ -31,6 +31,7 @@ function createMyBookShop(inventory) {
         priceForTitle : function(title) {
             return this.inventory.find(book => book.title === title).price;
         },
+        // Finds a book with a price
         titleForPrice: function(price) {
             return this.inventory.find( book => book.price === price).title;
         }
@@ -40,11 +41,11 @@ function createMyBookShop(inventory) {
 const myInventory = [
     { title: 'Harry Potter', price: 10 },
     { title: 'Eloquent Javascript', price: 15 },
-    { title: 'Pragmatic Programmer', price: 50 },
+    { title: 'Pragmatic Programmer 4', price: 50 }
 ]
 const myBookShop = createMyBookShop(myInventory);
 
 console.log(myBookShop);
 console.log(myBookShop.inventoryValue());
 console.log(myBookShop.priceForTitle("Harry Potter"));
-console.log(myBookShop.titleForPrice(10));
+console.log(myBookShop.titleForPrice(50));
