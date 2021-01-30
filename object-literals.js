@@ -42,6 +42,7 @@ const myInventory = [
     { title: 'Harry Potter', price: 10 },
     { title: 'Eloquent Javascript', price: 15 },
     { title: 'Pragmatic Programmer 4', price: 50 }
+    { title: 'Pragmatic Programmer ', price: 55 }
 ]
 const myBookShop = createMyBookShop(myInventory);
 
