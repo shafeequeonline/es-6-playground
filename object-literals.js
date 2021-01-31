@@ -50,3 +50,14 @@ console.log(myBookShop);
 console.log(myBookShop.inventoryValue());
 console.log(myBookShop.priceForTitle("Harry Potter"));
 console.log(myBookShop.titleForPrice(50));
+
+// ES 6 Sort
+let numberArray = [1,3,2]
+numberArray = numberArray.sort((a,b) => {return a - b})
+
+console.log(numberArray);
+
+// ES 6 reverse
+let myString = "jio";
+myString = myString.split('').reverse().join('');
+console.log(myString);
