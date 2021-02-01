@@ -61,3 +61,24 @@ console.log(numberArray);
 let myString = "jio";
 myString = myString.split('').reverse().join('');
 console.log(myString);
+
+// ES6 Reduce
+
+let students = [
+    { 
+        name: 'Shafeeque', 
+        marks: [ 
+            { 
+                sub1: 45, 
+                sub2: 40 
+            } 
+        ],
+        total: function(marks) {
+            return marks.reduce((accumulator, mark) => {accumulator+mark}, 0)
+        } 
+    }
+]
+
+
+
+console.log(students.total());
