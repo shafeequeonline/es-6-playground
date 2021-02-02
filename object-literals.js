@@ -24,11 +24,11 @@ console.log(bookShop.priceForTitle('Harry Potter'));
 
 function createMyBookShop(inventory) {
     return {
-        inventory: inventory,
-        inventoryValue : function() {
+        inventory, // if we are using the same identical name for key and value we can omit the value inventory: inventory => inventory
+        inventoryValue() { // in ES6 we dont need the function keywork when it's a value of a key in object inventoryValue : function() => inventoryValue ()
             return this.inventory.reduce((total, book) => total + book.price, 0);
         },
-        priceForTitle : function(title) {
+        priceForTitle(title) {
             return this.inventory.find(book => book.title === title).price;
         },
         // Finds a book with a price
