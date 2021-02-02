@@ -13,3 +13,10 @@ function createAdminUser(user = new User(generateId())) {
 }
 const user = new User(generateId())
 console.log(createAdminUser(user));
+
+
+// refactor
+
+function sum(a = 0, b = 0) {
+    return a + b;
+  }
