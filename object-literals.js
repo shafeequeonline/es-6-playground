@@ -25,7 +25,7 @@ console.log(bookShop.priceForTitle('Harry Potter'));
 function createMyBookShop(inventory) {
     return {
         inventory, // if we are using the same identical name for key and value we can omit the value inventory: inventory => inventory
-        inventoryValue() { // in ES6 we dont need the function keywork when it's a value of a key in object inventoryValue : function() => inventoryValue ()
+        inventoryValue() { // in ES6 we dont need the function keyword when it's a the same value of a key in object inventoryValue : function() => inventoryValue ()
             return this.inventory.reduce((total, book) => total + book.price, 0);
         },
         priceForTitle(title) {
@@ -79,3 +79,18 @@ function findTotal(students, name) {
 }
 
 console.log(findTotal(students,'Shafeeque'));
+
+
+// Excercise 1
+// refactor with enhanced literal notation
+
+const red = '#ff0000';
+const blue = '#0000ff';
+
+// const COLORS = { red: red, blue: blue };
+const COLORS = { red, blue };
+
+// Excercise 2
+const fields = ['firstName', 'lastName', 'phoneNumber'];
+      
+const props = { fields }; 
