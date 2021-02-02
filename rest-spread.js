@@ -22,3 +22,13 @@ const appColors = ['purple', 'dark blue', 'gray']
 const colorPallette = [...myColors, ...theirColors, ...appColors, 'Magenta'];
 
 console.log(colorPallette);
+
+// rest and spread together
+
+function validateSHoppingList(...items) {
+    if(items.indexOf('milk') < 0){
+        return [ 'milk', ...items ]
+    }
+    return items;
+}
+console.log(validateSHoppingList('banana','orange','egg'));
