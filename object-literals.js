@@ -63,22 +63,20 @@ myString = myString.split('').reverse().join('');
 console.log(myString);
 
 // ES6 Reduce
+// Find total of each student in an object
 
 let students = [
-    { 
-        name: 'Shafeeque', 
-        marks: [ 
-            { 
-                sub1: 45, 
-                sub2: 40 
-            } 
-        ],
-        total: function(marks) {
-            return marks.reduce((accumulator, mark) => {accumulator+mark}, 0)
-        } 
-    }
+    { name: 'Shafeeque', marks: [ { sub1: 45, sub2: 40 } ] },
+    { name: 'Umer', marks: [ { sub1: 48, sub2: 49 } ] },
+    { name: 'Nijo', marks: [ { sub1: 44, sub2: 46 } ] },
 ]
 
+function findTotal(students, name) {
+    return students.find((student) => {
+        return student.name === name
+    }).marks.reduce((accumulator, mark) => {
+        return accumulator + mark.sub1 + mark.sub2;
+    },0)   
+}
 
-
-console.log(students.total());
+console.log(findTotal(students,'Shafeeque'));
