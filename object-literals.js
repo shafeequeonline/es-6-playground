@@ -72,9 +72,8 @@ let students = [
 ]
 
 function findTotal(students, name) {
-    return students.find((student) => {
-        return student.name === name
-    }).marks.reduce((accumulator, mark) => {
+    return students.find(student => student.name === name
+    ).marks.reduce((accumulator, mark) => {
         return accumulator + mark.sub1 + mark.sub2;
     },0)   
 }
