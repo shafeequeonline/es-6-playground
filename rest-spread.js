@@ -10,4 +10,15 @@ function addNumbers(...numbers) {
 }
 
 // console.log(addNumbers([1,2,3]));
-console.log(addNumbers(1,2,3));
+console.log(addNumbers(1,2,3)); 
+
+
+// spread operator
+const myColors = ['red', 'green', 'blue']
+const theirColors = ['orange', 'black', 'yellow']
+const appColors = ['purple', 'dark blue', 'gray']
+
+
+const colorPallette = [...myColors, ...theirColors, ...appColors, 'Magenta'];
+
+console.log(colorPallette);
