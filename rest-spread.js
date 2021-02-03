@@ -38,6 +38,7 @@ console.log(validateSHoppingList('banana','orange','egg'));
 const MathLibrary = {
     // we are calling the multiply method using rest operatro
     calculateProduct(...rest) {
+        console.log('Please use multiply metod, calculate product will be deprecated soon');
         return this.multiply(...rest);
     },
 
@@ -47,3 +48,14 @@ const MathLibrary = {
 }
 
 console.log(MathLibrary.calculateProduct(2,5));
+
+// Excercise 1
+//  refactor using spread operator
+function product(a, b, c, d, e) {
+    var numbers = [a,b,c,d,e];
+    
+    return numbers.reduce(function(acc, number) {
+      return acc * number;
+    }, 1)
+  }
+  
