@@ -77,3 +77,13 @@ const techCompanies = [
 const [{ headquarters }, tecComp2, tecComp3] = techCompanies;
 
 console.log(headquarters, tecComp2, tecComp3);
+
+
+// complex one
+const Google = {
+    locations : ['Mountain view', 'New york', 'London']
+}
+
+// here we are selecting the object first then selecting the first value inside that
+const { locations: [firstLocation, ...rest] } = Google
+console.log(firstLocation);
