@@ -65,3 +65,15 @@ console.log(length);
 const [ comp1, comp2, ...otherComp ] = companies;
 
 console.log(otherComp);
+
+// destructure array and object together
+
+const techCompanies = [
+    { name: 'Google', headquarters: 'Montain View' },
+    { name: 'Facebook', headquarters: 'Menlo Park' },
+    { name: 'Uber', headquarters: 'San Francisco' },
+]
+
+const [{ headquarters }, tecComp2, tecComp3] = techCompanies;
+
+console.log(headquarters, tecComp2, tecComp3);
