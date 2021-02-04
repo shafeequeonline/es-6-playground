@@ -58,4 +58,9 @@ function product(a, b, c, d, e) {
       return acc * number;
     }, 1)
   }
-  
+
+
+  // refactor with rest operator
+  function unshift(array, ...rest) {
+    return [...rest, ...array];
+  }
