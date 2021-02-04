@@ -48,3 +48,20 @@ function fileSummeryES6( { name, extension, size }, { fileSizeType } ) {
 }
 
 console.log(fileSummeryES6(savedFile, { fileSizeType: 'KB'}));
+
+// Destructure arrays
+
+const companies = ['Google', 'Facebook', 'EQS', 'Uber'];
+
+// to aceess value we use square brackets ([])
+const [ company1, company2, company3, company4 ] = companies;
+console.log(company1, company2, company3, company4);
+
+// here we are accessing a property, that's why used curly braces ({})
+const { length } = companies;
+console.log(length);
+
+// we can use spread operator too
+const [ comp1, comp2, ...otherComp ] = companies;
+
+console.log(otherComp);
