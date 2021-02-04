@@ -14,3 +14,15 @@ var expense = {
 const { type, amount } = expense;
 
 console.log(type, ",", amount);
+
+
+// my example
+const place = {
+    name: 'Kakkanad',
+    city: 'Kochi',
+    state: 'Kerala'
+}
+
+const { name, city, state } = place;
+
+console.log(name, city, state);
