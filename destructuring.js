@@ -87,3 +87,25 @@ const Google = {
 // here we are selecting the object first then selecting the first value inside that
 const { locations: [firstLocation, ...rest] } = Google
 console.log(firstLocation);
+
+// Normal way
+function signUp(username, password, email, dateOfBirth, city) {
+    return username + ' ' + password + ' ' + email + ' ' + dateOfBirth + ' ' + city;
+}
+
+console.log(signUp('shaz','123456','mm@mm.com','05/03/1989','Malappuram'));
+
+const user = {
+    username: 'shaz',
+    password: '12345667890',
+    email: 'mm@mm.com',
+    dateOfBirth: '05/03/1989',
+    city: 'Malappuram'
+}
+
+// used de structuring of object here. Now we don't have to worry about the order of arguments
+function mySignUp( { dateOfBirth, username, password, email, city }) {
+    return username + ' ' + password + ' ' + email + ' ' + dateOfBirth + ' ' + city;
+}
+
+console.log(mySignUp(user));
