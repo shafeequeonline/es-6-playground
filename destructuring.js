@@ -103,6 +103,7 @@ const user = {
     city: 'Malappuram'
 }
 
+
 // used de structuring of object here. Now we don't have to worry about the order of arguments
 function mySignUp( { dateOfBirth, username, password, email, city }) {
     return username + ' ' + password + ' ' + email + ' ' + dateOfBirth + ' ' + city;
