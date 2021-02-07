@@ -119,6 +119,12 @@ const shoppingList = [
 ]
 
 
-const [ firstItem, secondItem ] = shoppingList;
+const [{ item, qty }, secondItem] = shoppingList;
 
-console.log(secondItem);
+console.log(item, qty, secondItem);
+
+
+// get total value of cart
+
+const totalValue = shoppingList.reduce((prevItem, item) => { return prevItem + item.unitPrice * item.qty}, 0);
+console.log(totalValue);
