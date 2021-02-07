@@ -110,3 +110,15 @@ function mySignUp( { dateOfBirth, username, password, email, city }) {
 }
 
 console.log(mySignUp(user));
+
+// my example
+const shoppingList = [
+    { item: 'Tomato', qty: 5, unitPrice: 20 },
+    { item: 'Potato', qty: 3, unitPrice: 27 },
+    { item: 'Celery', qty: 1, unitPrice: 30 },
+]
+
+
+const [ firstItem, secondItem ] = shoppingList;
+
+console.log(secondItem);
