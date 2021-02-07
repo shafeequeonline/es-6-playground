@@ -128,3 +128,20 @@ console.log(item, qty, secondItem);
 
 const totalValue = shoppingList.reduce((prevItem, item) => { return prevItem + item.unitPrice * item.qty}, 0);
 console.log(totalValue);
+
+// another destructure example
+
+const points = [
+    [4, 5],
+    [10, 7],
+    [0, 3]
+]
+
+// destructure to create an object with x and y 
+// we destructured in the argument itself
+const myChart = points.map(([x, y]) => {
+    // used improved object literal since the key and value are identical
+    return { x, y}
+})
+
+console.log(myChart);
