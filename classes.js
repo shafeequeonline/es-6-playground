@@ -30,14 +30,43 @@ console.log(myToyota, myToyota.honk(), myToyota.drive());
 
 class NewCar {
     // applied destructure here, otherwise this will be just (options) nad options.title;
-    constructor( { title } ) {
+    constructor( { title, make } ) {
         this.title = title;
+        this.make = make;
     }
 
+    // enhanced object literals, otherwise this will be drive : function(){}
     drive() {
         return 'vroom'
     }
 }
 
-const myNewCar = new NewCar({title: 'Toyota'});
+class NewToyota extends NewCar {
+    // Normal way
+    // constructor(options) {
+    //     this.title = options.title,
+    //     this.color = options.color;
+    // }
+
+    // destructred way
+    // constructor({color, title}){
+    //     this.color = color;
+    //     this.title = title;
+    // }
+
+    // when using with extend method we can't use destructure
+    constructor(options){
+        super(options);
+        this.color = options.color;
+    }
+
+    honk() {
+        return 'beep beep';
+    }
+}
+
+const myNewCar = new NewCar({title: 'Toyota', make: 2010});
 console.log(myNewCar, myNewCar.drive());
+
+const myToyotaCar = new NewToyota({color: 'dual tone, red and black', title: 'Liva'});
+console.log(myToyotaCar, myToyotaCar.honk(), myToyotaCar.drive());
