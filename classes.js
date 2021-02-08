@@ -68,7 +68,7 @@ class NewToyota extends NewCar {
 const myNewCar = new NewCar({title: 'Toyota', make: 2010});
 console.log(myNewCar, myNewCar.drive());
 
-const myToyotaCar = new NewToyota({color: 'dual tone, red and black', title: 'Liva'});
+const myToyotaCar = new NewToyota({color: 'dual tone, red and black', title: 'Liva', make: 2009});
 console.log(myToyotaCar, myToyotaCar.honk(), myToyotaCar.drive());
 
 
@@ -95,3 +95,27 @@ const snake2 = new Snake({ name: 'Willy' });
 snake1.bite(snake2);
 console.log(snake1);
 console.log(snake2);
+
+// My excercise
+// create a class for books in a library
+// create a class to add author too
+// each author should have atleast a book assigned
+
+class Author {
+    constructor( options ) {
+        this.name = options.name,
+        this.country = options.country;
+    }
+}
+
+class Books extends Author {
+    constructor(options) {
+        super(options)
+        this.book = options.book
+        this.year = options.year;
+    }
+}
+
+// const madhavikutty = new Author({ name: 'Kamala Surayya', country: 'India'});
+const madhavikuttyBooks = new Books({book: 'Neermathalam Poothappol', year: 2000, name: 'Kamala', country: 'IN'})
+console.log(madhavikuttyBooks); 
