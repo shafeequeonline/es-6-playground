@@ -152,10 +152,39 @@ const classes = [
     [ 'Chemistry', '9AM', 'Mr. Darnick' ],
     [ 'Physics', '10:15AM', 'Mrs. Lithun'],
     [ 'Math', '11:30AM', 'Mrs. Vitalis' ]
-  ];
+];
   
-  const classesAsObject = classes.map(([subject, time, teacher]) => {
-      return { subject, time, teacher }
-  });
+const classesAsObject = classes.map(([subject, time, teacher]) => {
+    return { subject, time, teacher }
+});
 
-  console.log(classesAsObject);
+console.log(classesAsObject);
+
+// Excersice 
+
+const mynumbers = [1, 2, 3];
+
+// map method
+function doubleVal(array) {
+    let newArray = [];
+    array.map((number) => newArray.push(number * 2))
+    return newArray;
+}
+
+console.log(doubleVal(mynumbers));
+
+
+const numbers = [1, 2, 3];
+let finalNumbers = [];
+function double(numbers) {
+    const [number, ...rest] = numbers;
+    if(number === undefined) {
+        return finalNumbers;
+    }
+    else{
+        finalNumbers.push(number * 2)
+        return double([...rest])
+    }
+}
+
+console.log(double(numbers));
