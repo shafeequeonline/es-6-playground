@@ -48,3 +48,13 @@ const newObj = {...originalObj, c:3}
 const  {a, ...rest } = newObj;
 
 console.log(originalObj, newObj, rest);
+
+const myNumberArray = [1,2,3,4,5]
+const myNewNumberArray = [...myNumberArray, 4];
+const [ number1, number2, number3, ...other ] = myNewNumberArray
+
+console.log(myNumberArray, myNewNumberArray);
+console.log('number1', number1);
+console.log('number2', number2);
+console.log('number3', number3);
+console.log('other', other);
