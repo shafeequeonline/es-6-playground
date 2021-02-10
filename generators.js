@@ -82,4 +82,9 @@ console.log(short);
 
 (function () {
     console.log('Welcome to the Internet. Please follow me.');
-  }());
+}());
+
+function concateAll(...arg){
+    return arg.join('')
+}
+console.log(concateAll(['a','b','c']));
