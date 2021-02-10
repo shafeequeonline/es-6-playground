@@ -64,3 +64,10 @@ console.log('other', other);
     console.log(flatten, index);
     return flatten;
   });
+
+
+const anotherNumberArray = myNewNumberArray.map((number) => number * 2 )
+console.log(anotherNumberArray);
+
+const anotherFilterNumber = anotherNumberArray.filter((number) => number > 5)
+console.log(anotherFilterNumber);
