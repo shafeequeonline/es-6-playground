@@ -42,3 +42,9 @@ for(let mark of marks) {
 }
 
 console.log(totalMark);
+
+const originalObj = {a:1, b:2}
+const newObj = {...originalObj, c:3}
+const  {a, ...rest } = newObj;
+
+console.log(originalObj, newObj, rest);
