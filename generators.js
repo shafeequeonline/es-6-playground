@@ -71,3 +71,15 @@ console.log(anotherNumberArray);
 
 const anotherFilterNumber = anotherNumberArray.filter((number) => number > 5)
 console.log(anotherFilterNumber);
+
+const short = function longUniqueMoreDescriptiveLexicalFoo() {
+    return 'I am running';
+};
+
+console.log(short);
+
+// IIFE
+
+(function () {
+    console.log('Welcome to the Internet. Please follow me.');
+  }());
