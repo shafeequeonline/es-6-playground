@@ -58,3 +58,9 @@ console.log('number1', number1);
 console.log('number2', number2);
 console.log('number3', number3);
 console.log('other', other);
+
+[[0, 1], [2, 3], [4, 5]].reduce((acc, item, index) => {
+    const flatten = acc.concat(item);
+    console.log(flatten, index);
+    return flatten;
+  });
