@@ -132,6 +132,9 @@ function* TeamIterator(team) {
     yield team.lead;
     yield team.manager;
     yield team.engineer;
+    // We extended the Testing team generator to this generator
+    const testingTeamIterator = TestingTeamIterator(team.testingTeam);
+    yield* testingTeamIterator;
 }
 
 function* TestingTeamIterator(team) {
