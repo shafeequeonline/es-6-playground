@@ -111,3 +111,39 @@ for(let color of myFavColors()) {
 }
 
 console.log(myColors);
+
+
+// real world example
+const engineeringTeam = {
+    size: 3,
+    department: 'Engineering',
+    lead: 'John',
+    manager: 'Edwin',
+    engineer: 'Shafeeque'
+}
+
+const qaTeam = {
+    size: 3,
+    department: 'Quality Management',
+    lead: 'Bill',
+    manager: 'Robert',
+    engineer: 'Arjun'
+}
+
+function* TeamIterator(team) {
+    yield team.lead;
+    yield team.manager;
+    yield team.engineer;
+}
+
+const myTeam = []
+
+for(let name of TeamIterator(engineeringTeam)){
+    myTeam.push(name)
+}
+
+for(let name of TeamIterator(qaTeam)){
+    myTeam.push(name)
+}
+
+console.log(myTeam);
