@@ -114,20 +114,18 @@ console.log(myColors);
 
 
 // real world example
+const testingTeam = {
+    lead: 'Bill',
+    tester: 'Arjun'
+}
+
 const engineeringTeam = {
+    testingTeam,
     size: 3,
     department: 'Engineering',
     lead: 'John',
     manager: 'Edwin',
     engineer: 'Shafeeque'
-}
-
-const qaTeam = {
-    size: 3,
-    department: 'Quality Management',
-    lead: 'Bill',
-    manager: 'Robert',
-    engineer: 'Arjun'
 }
 
 function* TeamIterator(team) {
@@ -136,14 +134,20 @@ function* TeamIterator(team) {
     yield team.engineer;
 }
 
-const myTeam = []
+function* TestingTeamIterator(team) {
+    yield team.lead;
+    yield team.tester;
+}
+
+const myEngineeringTeam = []
+const myTestingTeam = []
 
 for(let name of TeamIterator(engineeringTeam)){
-    myTeam.push(name)
+    myEngineeringTeam.push(name)
 }
 
-for(let name of TeamIterator(qaTeam)){
-    myTeam.push(name)
+for(let name of TestingTeamIterator(testingTeam)){
+    myTestingTeam.push(name)
 }
 
-console.log(myTeam);
+console.log(myEngineeringTeam, myTestingTeam);
