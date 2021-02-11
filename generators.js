@@ -88,3 +88,26 @@ function concateAll(...arg){
     return arg.join('')
 }
 console.log(concateAll(['a','b','c']));
+
+// Generators
+function* myNumbers() {
+    yield;
+}
+
+const gen = myNumbers();
+console.log(gen.next());
+console.log(gen.next());
+
+function* myFavColors() {
+    yield 'red';
+    yield 'green';
+    yield 'blue';
+}
+
+let myColors = [];
+
+for(let color of myFavColors()) {
+    myColors.push(color)
+}
+
+console.log(myColors);
