@@ -45,3 +45,36 @@ for(let name of engineeringTeam) {
 
 
 console.log(myEngineeringTeam);
+
+
+const teamTwo = {
+    lead: 'George',
+    engineers: [
+        'Hemlin', 'John'
+    ],
+    [Symbol.iterator]: function* (){
+        yield this.lead,
+        yield this.engineers
+    }
+}
+
+const teamOne = {
+    teamTwo,
+    lead: 'Edwin Daniel',
+    engineers: [
+        'Shafeeque Mohamed', 'John Samuel'
+    ],
+    [Symbol.iterator]: function* (){
+        yield this.lead,
+        yield this.engineers,
+        yield* this.teamTwo
+    }
+}
+
+const myTeamOneTwo = [];
+
+for(let name of teamOne) {
+    myTeamOneTwo.push(name)
+}
+
+console.log(myTeamOneTwo);
