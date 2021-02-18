@@ -16,7 +16,9 @@ promise
 // url https://jsonplaceholder.typicode.com/posts/
 
 let url = 'https://jsonplaceholder.typicode.com/posts/';
+url = 'https://jsonplaceholder.typicode123.com/posts/';
 fetch(url)
     // using response json method to read the readable data in the respne, then we will get the data to our application
     .then(response => response.json())
     .then(data => console.log(data))
+    .catch(error => console.log('BAD ERROR', error)) // this will catch if the domain itself wrong
