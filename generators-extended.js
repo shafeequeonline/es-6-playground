@@ -126,13 +126,27 @@ class Comment {
         this.content = content;
         this.children = children;
     }
+
+    *[Symbol.iterator]() {
+        yield this.content;
+        for(let child of this.children) {
+            yield* child;
+        }
+    }
 }
 
 const children = [
     new Comment('Good post', []),
     new Comment('Nice article', []),
     new Comment('Meh..!', []),
+    new Comment('My new comment ..!', []),
 ]
 
 const parentNode = new Comment('Excellent one', children);
-console.log(parentNode);
+// console.log(parentNode);
+
+const comments = [];
+for(let comment of parentNode) {
+    comments.push(comment)
+}
+console.log(comments);
