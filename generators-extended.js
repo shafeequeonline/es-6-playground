@@ -78,3 +78,43 @@ for(let name of teamOne) {
 }
 
 console.log(myTeamOneTwo);
+
+
+// Generators anothe example
+const teamRabbit = {
+    lead: 'Ron',
+    qa: 'Emiliy',
+    dev: 'Sanith',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.qa,
+        yield this.dev
+    }
+}
+
+const teamParrot = {
+    lead: 'Peter',
+    qa: 'Hiller',
+    dev: 'Reddy',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.qa,
+        yield this.dev
+    }
+}
+
+const devTeams = {
+    teamParrot,
+    teamRabbit,
+    [Symbol.iterator]: function* () {
+        yield* this.teamParrot;
+        yield* this.teamRabbit
+    }
+}
+
+let devTeamsArray = []
+
+for(let name of devTeams) {
+    devTeamsArray.push(name)
+}
+console.log(devTeamsArray);
