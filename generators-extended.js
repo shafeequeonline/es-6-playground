@@ -118,3 +118,21 @@ for(let name of devTeams) {
     devTeamsArray.push(name)
 }
 console.log(devTeamsArray);
+
+
+// better example
+class Comment {
+    constructor(content, children) {
+        this.content = content;
+        this.children = children;
+    }
+}
+
+const children = [
+    new Comment('Good post', []),
+    new Comment('Nice article', []),
+    new Comment('Meh..!', []),
+]
+
+const parentNode = new Comment('Excellent one', children);
+console.log(parentNode);
