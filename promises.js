@@ -22,3 +22,4 @@ fetch(url)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log('BAD ERROR', error)) // this will catch if the domain itself wrong
+    
