@@ -31,3 +31,8 @@ const newNumberArray = numberArray;
 newNumberArray[0] = 10;
 
 console.log(numberArray, newNumberArray);
+
+const original = {a:1, b:2};
+const copy = Object.assign( original, {c:5})
+delete copy.a
+console.log(original, copy);
