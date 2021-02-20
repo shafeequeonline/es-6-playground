@@ -22,4 +22,12 @@ fetch(url)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log('BAD ERROR', error)) // this will catch if the domain itself wrong
-    
+
+
+// revision task
+//  if we are azsiging a reference to an array, modifying the new array will change the value in the original. Use array function if you want to use it seperately
+const numberArray = [1,2]
+const newNumberArray = numberArray;
+newNumberArray[0] = 10;
+
+console.log(numberArray, newNumberArray);
