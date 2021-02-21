@@ -21,3 +21,7 @@ var myObject = {
     }
 };
 myObject.func();
+
+const total = numbers.reduce((accumulator, number) => accumulator + number)
+console.log(total);
+
