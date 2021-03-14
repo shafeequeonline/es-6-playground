@@ -52,4 +52,7 @@ console.log(filter(1,2,3,));
 
 // destructuring
 [num1, num2] = numbers;
-console.log(num1, num2);
+console.log(num1, num2); 
+
+// Reference and Primitive
+// test
