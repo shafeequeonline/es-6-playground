@@ -66,7 +66,7 @@ console.log(saySomething.apply(person, ['wonderful!']));
 var newPerson = saySomething.bind(person, "just wow!");
 console.log(newPerson());
 
-
+// currying
 function multiply(a, b) {
     return a * b;
 }
@@ -82,3 +82,34 @@ function currying(fn) {
 var curryingVar = currying(multiply)
 
 console.log(multiply(3,6), curryingVar(3)(6));
+
+// Scope
+function awesomeFunction() {
+    var aa = 2;
+
+    var multiply = function() {
+        console.log(aa * 2);
+    }
+}
+// console.log(aa);
+// console.log(multiply());
+
+
+var obj1 = {
+    valueOfThis: function() {
+        return this
+    }
+}
+
+var obj2 = {
+    valueOfThis: () => {
+        return this
+    }
+}
+console.log(obj1.valueOfThis(), obj2.valueOfThis());
+
+const myNum = [1,2,3]
+const myNumNew = [...myNum]
+myNumNew.push(5)
+
+console.log(myNum, myNumNew);

@@ -25,7 +25,7 @@ fetch(url)
 
 
 // revision task
-//  if we are azsiging a reference to an array, modifying the new array will change the value in the original. Use array function if you want to use it seperately
+//  if we are assiging a reference to an array, modifying the new array will change the value in the original. Use array function if you want to use it seperately
 const numberArray = [1,2]
 const newNumberArray = numberArray;
 newNumberArray[0] = 10;
