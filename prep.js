@@ -43,3 +43,42 @@ var y = 1;
 if(y) {
     console.log("y", y);
 }
+
+var obj = {
+    name: "Shaz",
+    getName() {
+        console.log(this);
+    }
+}
+
+obj.getName()
+
+
+function saySomething(message) {
+    return this.name + " is " + message
+}
+
+var person  = {name: "Shaz"}
+
+console.log(saySomething.call(person, "awesome!"));
+console.log(saySomething.apply(person, ['wonderful!']));
+
+var newPerson = saySomething.bind(person, "just wow!");
+console.log(newPerson());
+
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function currying(fn) {
+    return function(a) {
+        return function(b) {
+            return fn(a,b)
+        }
+    }
+}
+
+var curryingVar = currying(multiply)
+
+console.log(multiply(3,6), curryingVar(3)(6));
