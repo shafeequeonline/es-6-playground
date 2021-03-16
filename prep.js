@@ -182,3 +182,56 @@ console.log(name, carColor, variant);
 
 
 // filter
+let numberFilterArray = [10,5,7,8,4,33]
+
+const filteredArray = numberFilterArray.filter((number) => number < 15)
+console.log(filteredArray);
+
+const mappedArray = numberFilterArray.map((number) => number)
+console.log(mappedArray);
+
+// ForEach
+let weather = [
+    { name: 'Malappuram', temperature: 24.3, humidity: 1.5 },
+    { name: 'Kochi', temperature: 22.3, humidity: 3 },
+    { name: 'Trivandrum', temperature: 20.3, humidity: 2 },
+    { name: 'Calicut', temperature: 25.3, humidity: 1 },
+    { name: 'Palakkad', temperature: 30.3, humidity: 4 }
+]
+
+
+const weather20plus = []
+weather.forEach((place) => {
+    place.temperature > 22 ? weather20plus.push(place) : '' ;
+})
+
+console.log(weather20plus);
+
+const teamOne = {
+    lead:'Bevin',
+    qa: 'Arjun',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.qa;
+    }
+}
+
+const teamTwo = {
+    lead:'Emil',
+    qa: 'David',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.qa;
+    }
+}
+
+const myTeam = {
+    teamOne,
+    teamTwo,
+    [Symbol.iterator]: function* () {
+        yield this.teamOne;
+        yield this.teamTwo
+    }
+}
+
+console.log(myTeam);

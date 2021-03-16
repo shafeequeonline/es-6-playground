@@ -80,7 +80,7 @@ for(let name of teamOne) {
 console.log(myTeamOneTwo);
 
 
-// Generators anothe example
+// Generators another example
 const teamRabbit = {
     lead: 'Ron',
     qa: 'Emiliy',
