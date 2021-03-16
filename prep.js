@@ -132,3 +132,53 @@ myMarks.forEach(mark => totalMarkForEach += mark)
 //     return totalMarkForEach
 // })
 console.log(tt, total, totalMarkForEach);
+
+// class 
+
+class Author {
+    constructor(details) {
+        this.author = details.author
+    }
+}
+
+class Item extends Author {
+    constructor(options) {
+        super(options)
+        this.name = options.name;
+        this.price = options.price
+    }
+}
+
+
+const book = new Item({name: "Gulliver's Islan", price: 100, author: "Mark Reus" })
+const anotherBook = new Item({name: "Gulliver's Islan", price: 160, author: "Mark Reus" })
+const yetAnotherBook = new Item({name: "Gulliver's Islan", price: 200, author: "Mark Reus" })
+console.log(book);
+
+const myLibrary = [book, anotherBook, yetAnotherBook]
+
+const booksHasPriceMoreThan150 = myLibrary.some((book) => {return book.price > 150});
+
+console.log("booksHasPriceMoreThan150 is", booksHasPriceMoreThan150 );
+
+
+// destructuring
+let myCar = ['Hyundai i10', 'White', 'Petrol']
+
+const [ model, color, fuel ] = myCar;
+console.log(model, color, fuel);
+
+const { length } = myCar;
+console.log(length);
+
+const objCar = {
+    name: 'Hyunday i10 Grand',
+    carColor: 'White',
+    variant: 'Petrol'
+}
+
+const { name, carColor, variant } = objCar;
+console.log(name, carColor, variant);
+
+
+// filter
