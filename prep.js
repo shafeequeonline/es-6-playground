@@ -113,3 +113,22 @@ const myNumNew = [...myNum]
 myNumNew.push(5)
 
 console.log(myNum, myNumNew);
+
+let myMarks = [10,15,22];
+let total = myMarks.reduce((acc, mark) => 
+    { return acc + mark }, 0
+);
+
+let tt = myMarks.reduce((acc, mark) => {
+    return acc + mark
+},)
+
+let totalMarkForEach = 0;
+
+myMarks.forEach(mark => totalMarkForEach += mark) 
+
+// let myTotal = myMarks.forEach((mark) => {
+//     totalMarkForEach = mark
+//     return totalMarkForEach
+// })
+console.log(tt, total, totalMarkForEach);
